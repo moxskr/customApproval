@@ -53,7 +53,7 @@ jobs:
                   sf --version
 
             - name: 'Authenticate Dev Hub'
-              run: sf org login jwt --client-id ${{ secrets.SF_CLIENT_ID }} --jwt-key-file ./assets/server.key --username ${{ secrets.SF_USERNAME }} --alias ci-dev-hub --set-default-dev-hub
+              run: sf org login jwt --client-id ${{ secrets.SF_CLIENT_ID }} --jwt-key-file ./.assets/server.key --username ${{ secrets.SF_USERNAME }} --alias ci-dev-hub --set-default-dev-hub
 
             - name: 'Create scratch org'
               run: sf org create scratch -f config/project-scratch-def.json -a scratch-org -d -y 1
