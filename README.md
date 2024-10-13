@@ -3,15 +3,16 @@
 ## Approval Flows Based on Opportunity Stage and Amount:
 
 There should be three distinct approval flows, based on the combination of the Opportunity Stage and the Opportunity Amount:
- - Standard Approval Flow: This flow triggers when the Opportunity Stage is "Qualification" or "Needs Analysis" and the Opportunity Amount is less than $50,000. It requires approval from the Sales Manager only.
- - Intermediate Approval Flow: This flow triggers when the Opportunity Stage is "Proposal" or "Negotiation" and the Opportunity Amount is between $50,000 and $250,000. This flow requires approvals from:
-    - The Sales Manager
-    - The Finance Manager
-- Complex Approval Flow: This flow triggers when the Opportunity Stage is "Closed - Won" and the Opportunity Amount is      greater than $250,000. This flow requires approvals from:
-    - The Sales Manager
-    - The Finance Manager
-    - The Vice President of Sales
-    - Legal Department (based on specific conditions like discounts or contract terms)
+
+-   Standard Approval Flow: This flow triggers when the Opportunity Stage is "Qualification" or "Needs Analysis" and the Opportunity Amount is less than $50,000. It requires approval from the Sales Manager only.
+-   Intermediate Approval Flow: This flow triggers when the Opportunity Stage is "Proposal" or "Negotiation" and the Opportunity Amount is between $50,000 and $250,000. This flow requires approvals from:
+    -   The Sales Manager
+    -   The Finance Manager
+-   Complex Approval Flow: This flow triggers when the Opportunity Stage is "Closed - Won" and the Opportunity Amount is greater than $250,000. This flow requires approvals from:
+    -   The Sales Manager
+    -   The Finance Manager
+    -   The Vice President of Sales
+    -   Legal Department (based on specific conditions like discounts or contract terms)
 
 ## Delegation and Reassignment:
 
@@ -20,7 +21,7 @@ If an approver is unavailable for more than 48 hours, the approval request shoul
 Conditional Rules for Approval Flow:
 
 If the Opportunity has a discount of more than 15%, it should trigger an additional review step by the Pricing Team, regardless of the approval flow.
-If the Opportunity is associated with a strategic account (determined by a custom field Strategic_Account__c), the flow should include the CEO's approval.
+If the Opportunity is associated with a strategic account (determined by a custom field Strategic_Account\_\_c), the flow should include the CEO's approval.
 Parallel Approval Processes:
 
 For the Complex Approval Flow, approvals from the Sales Manager and Finance Manager should be done in parallel to speed up the process.
