@@ -152,15 +152,15 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Approval Process Template Action</label>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Approval Process</label>
     <nameField>
-        <displayFormat>APTA-{0000}</displayFormat>
-        <label>Approval Process Template Action Name</label>
+        <displayFormat>AP-{0000}</displayFormat>
+        <label>Approval Process Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Approval Process Template Actions</pluralLabel>
+    <pluralLabel>Approval Processes</pluralLabel>
     <searchLayouts />
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

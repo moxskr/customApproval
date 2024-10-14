@@ -153,13 +153,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Approval Process Template Action</label>
+    <label>Approval Process Action</label>
     <nameField>
-        <displayFormat>APTA-{0000}</displayFormat>
-        <label>Approval Process Template Action Name</label>
-        <type>AutoNumber</type>
+        <label>Approval Process Action Name</label>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>Approval Process Template Actions</pluralLabel>
+    <pluralLabel>Approval Process Actions</pluralLabel>
     <searchLayouts />
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
