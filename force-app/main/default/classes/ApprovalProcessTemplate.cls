@@ -88,13 +88,13 @@ public inherited sharing class ApprovalProcessTemplate {
 		return stepsByTypes;
 	}
 
-    public List<ApprovalProcessTemplateAction> getActions() {
-        return this.actions;
-    }
+	public List<ApprovalProcessTemplateAction> getActions() {
+		return this.actions;
+	}
 
-    public void addAction(ApprovalProcessTemplateAction action) {
-        this.actions.add(action);
-    }
+	public void addAction(ApprovalProcessTemplateAction action) {
+		this.actions.add(action);
+	}
 
 	@TestVisible
 	private class ApprovalProcessTemplateException extends Exception {

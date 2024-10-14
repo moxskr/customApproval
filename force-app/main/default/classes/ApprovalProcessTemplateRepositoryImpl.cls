@@ -5,7 +5,7 @@ public inherited sharing class ApprovalProcessTemplateRepositoryImpl implements 
 		List<Approval_Process_Template__c> templateSObjects = [
 			SELECT
 				Id,
-                Name,
+				Name,
 				Entry_Criteria__c,
 				Object_Type__c,
 				(

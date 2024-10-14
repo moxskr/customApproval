@@ -12,28 +12,34 @@ public with sharing class ApprovalProcessLaunchService {
 			objectName
 		);
 
-        Map<Id, ApprovalProcessTemplate> templatesByRecordIds = new Map<Id, ApprovalProcessTemplate> ();
+		Map<Id, ApprovalProcessTemplate> templatesByRecordIds = new Map<Id, ApprovalProcessTemplate>();
 
 		for (SObject record : records) {
-            ApprovalProcessTemplate template = this.getTemplateForRecord(record, approvalProcessTemplates);
+			ApprovalProcessTemplate template = this.getTemplateForRecord(
+				record,
+				approvalProcessTemplates
+			);
 
-            if(template != null) {
-                templatesByRecordIds.put(record.Id, template);
-            }
+			if (template != null) {
+				templatesByRecordIds.put(record.Id, template);
+			}
 		}
 
-        System.debug('templatesByRecordIds >> ' + templatesByRecordIds);
+		System.debug('templatesByRecordIds >> ' + templatesByRecordIds);
 	}
 
-    private ApprovalProcessTemplate getTemplateForRecord(SObject record, List<ApprovalProcessTemplate> approvalProcessTemplates) {
-        ApprovalProcessTemplate resultTemplate;
+	private ApprovalProcessTemplate getTemplateForRecord(
+		SObject record,
+		List<ApprovalProcessTemplate> approvalProcessTemplates
+	) {
+		ApprovalProcessTemplate resultTemplate;
 
-        for(ApprovalProcessTemplate template : approvalProcessTemplates) {
-            if(template.isEntryCriteriaSatisfied(record)) {
-                resultTemplate = template;
-            }
-        }
+		for (ApprovalProcessTemplate template : approvalProcessTemplates) {
+			if (template.isEntryCriteriaSatisfied(record)) {
+				resultTemplate = template;
+			}
+		}
 
-        return resultTemplate;
-    }
+		return resultTemplate;
+	}
 }
