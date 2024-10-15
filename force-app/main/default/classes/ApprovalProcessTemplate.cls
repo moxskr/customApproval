@@ -96,6 +96,18 @@ public inherited sharing class ApprovalProcessTemplate {
 		this.actions.add(action);
 	}
 
+	public Set<Id> getStepsRoleIds() {
+		Set<Id> roleIds = new Set<Id>();
+
+		for (ApprovalProcessTemplateStep step : this.steps) {
+			if (step.getType() == 'Role') {
+				roleIds.add(step.getMemberId());
+			}
+		}
+
+		return roleIds;
+	}
+
 	@TestVisible
 	private class ApprovalProcessTemplateException extends Exception {
 	}

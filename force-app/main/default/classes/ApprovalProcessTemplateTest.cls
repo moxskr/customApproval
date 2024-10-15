@@ -86,16 +86,19 @@ class ApprovalProcessTemplateTest {
 			Test.startTest();
 
 			Map<String, List<ApprovalProcessTemplateStep>> stepsByTypes = template.getStepsByMemberTypes();
+			Set<Id> roleIds = template.getStepsRoleIds(); 
 
 			Test.stopTest();
 
 			Assert.areEqual(1, stepsByTypes.get('User').size());
 			Assert.areEqual(1, stepsByTypes.get('Role').size());
+			Assert.areEqual(1, roleIds.size());
+			Assert.isTrue(roleIds.contains(testRoleId));
 		}
 	}
 
 	@IsTest
-	static void testApprovalProcessTemplateGetActionsByTypes() {
+	static void testApprovalProcessTemplateGetActions() {
 		System.runAs(new User(Id = UserInfo.getUserId())) {
 			ApprovalProcessTemplate template = new ApprovalProcessTemplate();
 

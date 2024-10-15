@@ -1,4 +1,1 @@
-SELECT Id, Entry_Criteria__c, Object_Type__c, 
-(SELECT Id, Order__c, Type__c, Member_Id__c FROM Approval_Process_Template_Steps__r), 
-(SELECT Id, Order__c, Type__c, Is_Approved_Action__c, Action_JSON__c FROM Approval_Process_Template_Actions__r) 
-FROM Approval_Process_Template__c WHERE Object_Type__c = 'Account'
+SELECT Id, UserRoleId FROM User
